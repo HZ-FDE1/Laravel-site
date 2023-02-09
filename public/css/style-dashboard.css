@@ -1,0 +1,121 @@
+body, html {
+width: 40%;    
+height: 100%;
+}
+
+    
+    body {
+        color : white;
+        background-color: rgb(17, 20, 24);
+    }
+    nav {
+        font-family: Arial, Helvetica, sans-serif;
+        color: blue;
+    }
+    h1  {
+        color: white
+    }
+
+    table, th,td {
+        border: 3px solid white;
+        border-width: 2px;
+        border-style: dotted;
+    }
+
+
+    .tabel {
+        position: relative;
+        left: 700px;
+        top: 120px;
+        width: 700px;
+        height: 500px;
+    }
+
+    .ptitle {
+        position: relative;
+        left: 700px;
+        top: 120px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: underline;
+    }
+    
+    .pbar {
+        position: relative;
+        left: 710px;
+        top: 120px;
+        width: 145px;
+    }
+
+    .plabel {
+        position: relative;
+        left: 700px;
+        top: 120px;
+    }
+    .tba {
+        color: yellow;
+    }
+
+    .cijfers {
+        position: relative;
+        top: 120px;
+        left: 700px;
+        width: 700px;
+    }
+
+    .onvoldoende {
+        background-color: red;
+    }
+
+    .nietgdn {
+        background-color: yellow;
+        color: black;
+    }
+
+    .voldoende {
+        background-color: green;
+    }
+
+    .nbsatitle {
+        position: relative;
+        left: 1000px;
+        top: 32px;
+        border: 2px solid white;
+        border-style: double;
+        color: red;
+
+    }
+
+    .nbsatext {
+        position: relative;
+        left: 1000px;
+        top: 10px;
+        border: 2px solid white;
+        border-style: double;
+        border-width: 2px;
+    }
+
+    .extraec {
+        position: relative;
+        left: 1000px;
+        top: 10px;
+        color: green;
+        border: 2px solid white;
+        border-style: double;
+
+    }
+
+    .ectext {
+        position: relative;
+        left: 1000px;
+        top: -10px;
+        border: 2px solid white;
+        border-style: double;
+    }
+
+    .dashtitle {
+        position: relative;
+        left: 985px;
+        top: 100px;
+        font-size: 40;
+    }
+

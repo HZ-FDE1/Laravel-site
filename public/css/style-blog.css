@@ -1,0 +1,290 @@
+body, html {
+    height: 105%;
+    }
+    
+    body {
+        color : white;
+        background-color: rgb(17, 20, 24);
+    }
+
+    .choicehead {
+        font-size: 20 ;
+        position: relative;
+        left: 100px;
+      }
+
+      
+    .choicetext {
+        position: relative;
+        font-size: 15 ;
+        top: -45px;
+     }
+
+     .swothead {
+        font-size: 20 ;
+        position: relative;
+        left: 100px;
+      }
+
+      
+      .swottext {
+        position: relative;
+        top: -100px;
+        font-size: 15 ;
+     }
+
+     .protext {
+        position: relative;
+        top: -45px;
+     }
+       .prohead {
+        position: relative;
+        left: 100px;
+       }
+
+       .feedtext {
+        position: relative;
+        top: -40px;
+       }
+
+       .feedhead {
+        position: relative;
+        left: 140px;
+       }
+
+       .artlink {
+        color: white;
+       }
+
+       .arthead {
+        position: relative;
+        left: 100px;
+       }
+
+       .arttext {
+        position: relative;
+       top: -30px;
+       }
+
+    .togButton1 {
+        position: relative;
+        left: 500px;
+        top: 250px;
+        display: block;
+        border: 3px solid white;
+        width: 550px;
+        padding: 10px;
+        color: white;
+        background: transparent;
+        cursor: pointer;
+      }
+
+    .togContent1 {
+        position: relative;
+        left: 500px;
+        top: 229px;
+        max-height: 0;
+        opacity: 0;
+        width: 570px;
+        height: 110px;
+        visibility: hidden;
+        transition: max-height 0.5s;
+      }
+
+    .togCheck1:checked + .togContent1 {
+        max-height: 100vh; 
+        opacity: 1;
+        visibility: visible;
+  }
+
+   
+  .togContent1 { 
+    background: transparent;
+    border: 3px solid white;
+    border-style: dashed;
+ }
+
+  .togContent1 p {
+    padding: 50px 10px;
+    margin: 0;
+  }
+
+
+  .togButton2 {
+    position: relative;
+    left: 1150px;
+    top: 135px;
+    display: block;
+    border: 3px solid white;
+    width: 550px;
+    padding: 10px;
+    color: white;
+    background: transparent;
+    cursor: pointer;
+  }
+
+.togContent2 {
+    position: relative;
+    left: 1150px;
+    top: 113px;
+    max-height: 0;
+    opacity: 0;
+    width: 570px;
+    height: 250px;
+    visibility: hidden;
+    transition: max-height 0.5s;
+  }
+
+.togCheck2:checked + .togContent2 {
+max-height: 100vh; 
+opacity: 1;
+visibility: visible;
+}
+
+
+.togContent2 { 
+background: transparent;
+border: 3px solid white;
+border-style: dashed;
+}
+
+.togContent2 p {
+padding: 50px 10px;
+margin: 0;
+}
+
+.togButton3 {
+    position: relative;
+    left: 500px;
+    top: 250px;
+    display: block;
+    border: 3px solid white;
+    width: 550px;
+    padding: 10px;
+    color: white;
+    background: transparent;
+    cursor: pointer;
+  }
+
+.togContent3 {
+    position: relative;
+    left: 500px;
+    top: 228px;
+    max-height: 0;
+    opacity: 0;
+    width: 570px;
+    height: 80px;
+    visibility: hidden;
+    transition: max-height 0.5s;
+  }
+
+.togCheck3:checked + .togContent3 {
+    max-height: 100vh; 
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.togContent3 { 
+background: transparent;
+border: 3px solid white;
+border-style: dashed;
+}
+
+.togContent3 p {
+padding: 50px 10px;
+margin: 0;
+}
+
+.togButton4 {
+    position: relative;
+    left: 1150px;
+    top: 140px;
+    display: block;
+    border: 3px solid white;
+    width: 550px;
+    padding: 10px;
+    color: white;
+    background: transparent;
+    cursor: pointer;
+  }
+
+.togContent4 {
+    position: relative;
+    left: 1150px;
+    top: 119px;
+    max-height: 0;
+    opacity: 0;
+    width: 570px;
+    height: 140px;
+    visibility: hidden;
+    transition: max-height 0.5s;
+  }
+
+.togCheck4:checked + .togContent4 {
+    max-height: 100vh; 
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.togContent4 { 
+background: transparent;
+border: 3px solid white;
+border-style: dashed;
+}
+
+.togContent4 p {
+padding: 50px 10px;
+margin: 0;
+}
+
+.togButton5 {
+    position: relative;
+    left: 830px;
+    top: 230px;
+    display: block;
+    border: 3px solid white;
+    width: 550px;
+    padding: 10px;
+    color: white;
+    background: transparent;
+    cursor: pointer;
+  }
+
+.togContent5 {
+    position: relative;
+    left: 830px;
+    top: 209px;
+    max-height: 0;
+    opacity: 0;
+    width: 570px;
+    height: 55px;
+    visibility: hidden;
+    transition: max-height 0.5s;
+  }
+
+.togCheck5:checked + .togContent5 {
+    max-height: 100vh; 
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.togContent5 { 
+background: transparent;
+border: 3px solid white;
+border-style: dashed;
+}
+
+.togContent5 p {
+padding: 50px 10px;
+margin: 0;
+}
+
+.blogtitle {
+  position: relative;
+  top: 100px;
+  left: 1050px;
+  font-size: 40 ;
+}
