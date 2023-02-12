@@ -5,6 +5,8 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\PostsController;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,21 +19,7 @@ use App\Http\Controllers\BlogController;
 |
 */
 
-//Route::get('/posts/{post}',  function($post){
-//    $posts = [
-//        'my-first-post' => 'Hello, this is my first blog post!',
-//        'my-second-post' => 'Now I am getting the hang of this blogging thing.'
-//    ];
-//
-//    if (!array_key_exists($post, $posts)) {
-//        abort(404, 'Sorry, that post was not found.');
-//    }
-
-//    return view('post', [
-//        'post' => $posts[$post]
-//    ]);
-//});
-
+Route::get('/posts/{post}', [PostsController::class, 'show']);
 Route::get('/welcome', [WelcomeController::class, 'show']);
 Route::get('/profile', [ProfileController::class, 'show']);
 Route::get('/dashboard',[DashboardController::class, 'show']);

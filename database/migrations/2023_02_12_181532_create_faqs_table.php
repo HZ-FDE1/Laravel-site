@@ -11,14 +11,14 @@ return new class extends Migration
      *
      * @return void
      */
-    public function up(): void
+    public function up()
     {
-        Schema::create('post', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('slug');
-            $table->text('body');
+        Schema::create('faqs', function (Blueprint $table) {
+            $table->id();
+            $table->string('question');
+            $table->string('answer');
+            $table->string('link')->nullable();
             $table->timestamps();
-            $table->timestamp('published_at')->nullable();
         });
     }
 
@@ -27,8 +27,8 @@ return new class extends Migration
      *
      * @return void
      */
-    public function down(): void
+    public function down()
     {
-        Schema::dropIfExists('post');
+        Schema::dropIfExists('faqs');
     }
 };

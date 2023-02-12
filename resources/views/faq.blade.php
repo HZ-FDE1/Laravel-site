@@ -39,6 +39,12 @@
         <a class="Githublink" href="https://github.com/UBaron">Ontdek mijn werk!</a>
     </header>
 
+    <ul >
+        @foreach($faq as $faq)
+            <li>{{ $faq->question }}</li>
+        @endforeach
+    </ul>
+
     <Main>
         <h2 class="faqtitle">frequently asked questions</h2>
 
