@@ -1,19 +1,19 @@
 body, html {
     height: 125%;
     width:  40%;
-    }    
+    }
     body {
         color : white;
         background-color: rgb(17, 20, 24);
-        font-family: Arial, Helvetica, sans-serif    
+        font-family: Arial, Helvetica, sans-serif
     }
 
     nav {
         color: blue;
     }
-    
+
     .twitterlink {
-        position: relative; 
+        position: relative;
         left: 700px;
         top: 40px;
         color: rgb(17, 20, 24);
@@ -25,6 +25,11 @@ body, html {
         top: 40px;
         color: rgb(17, 20, 24);
     }
+
+.faqtable {
+    position: relative;
+    left: 820px;
+}
 
     .maillink {
         position: relative;

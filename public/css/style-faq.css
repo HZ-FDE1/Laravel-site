@@ -1,8 +1,8 @@
      html, body {
     height: 100%;
    }
-    
-    
+
+
     body {
         color : white;
         background-color: rgb(17, 20, 24);
@@ -19,6 +19,7 @@
         top: 100px;
         width: 600px;
     }
+
     .printtitle {
         position: relative;
         top: 40px;
@@ -305,7 +306,7 @@
     left: 1150px;
     top: -165px;
   }
-  
+
   .flip-box-inner6 {
     position: relative;
     width: 100%;
@@ -314,11 +315,11 @@
     transition: transform 0.8s;
     transform-style: preserve-3d;
   }
-  
+
   .flip-box6:hover .flip-box-inner6 {
     transform: rotateY(180deg);
   }
-  
+
   .flip-box-front6, .flip-box-back6 {
     position: absolute;
     width: 100%;
@@ -326,15 +327,22 @@
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
   }
-  
+
   .flip-box-front6 {
     background-color: transparent;
     color: white;
   }
-  
+
   .flip-box-back6 {
     background-color: transparent;
     color: white;
     transform: rotateY(180deg);
   }
-  
+
+  .faq-list {
+      position: relative;
+      left: 950px;
+      top: 50px;
+      font-size: 20;
+      width: 200px;
+  }

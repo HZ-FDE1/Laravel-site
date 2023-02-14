@@ -56,29 +56,29 @@
                     </td>
                     <td>5</td>
                     <td>Geschreven Tentamen</td>
-                    <td class="TBA">TBA</td>
+                    <td class="voldoende">8.5</td>
                 </tr>
                 <tr>
                     <td rowspan="2"> 2e curses</th>
                     <td>5</th>
                     <td>Geschreven Tentamen</th>
-                    <td class="TBA">TBA</td>
+                    <td class="voldoende">6.2</td>
                 </tr>
                 <tr>
                     <td>2,5</td>
                     <td>assesment</td>
-                    <td class="TBA">TBA</td>
+                    <td class="voldoende">7.5</td>
                 </tr>
                 <tr>
                     <td rowspan="2">2</td>
                     <td rowspan="2">Object Oriented Programming</td>
                     <td rowspan="2">10</td>
                     <td>Case Study (50%)</td>
-                    <td class="TBA">TBA</td>
+                    <td class="voldoende">5.5</td>
                 </tr>
                 <tr>
                     <td>Project (50%)</td>
-                    <td class="TBA">TBA</td>
+                    <td class="voldoende">8.5</td>
                 </tr>
                 <tr>
                     <td rowspan="4">3</td>
@@ -130,8 +130,8 @@
 
         <div>
             <h2 class="ptitle">Mijn EC progressie:</h2>
-            <label class="plabel" for="progressbar">0/60 EC</label>
-            <progress class="pbar" id="progressbar" value="1" max="60"> 0%</progress>
+            <label class="plabel" for="progressbar">12.5/60 EC</label>
+            <progress class="pbar" id="progressbar" value="12.5" max="60"> 0%</progress>
         </div>
 
         <div>

@@ -1,9 +1,9 @@
 body, html {
-width: 40%;    
+width: 40%;
 height: 100%;
 }
 
-    
+
     body {
         color : white;
         background-color: rgb(17, 20, 24);
@@ -38,7 +38,7 @@ height: 100%;
         font-family: Arial, Helvetica, sans-serif;
         text-decoration: underline;
     }
-    
+
     .pbar {
         position: relative;
         left: 710px;
@@ -66,13 +66,8 @@ height: 100%;
         background-color: red;
     }
 
-    .nietgdn {
-        background-color: yellow;
-        color: black;
-    }
-
     .voldoende {
-        background-color: green;
+        color: lime;
     }
 
     .nbsatitle {
@@ -98,7 +93,7 @@ height: 100%;
         position: relative;
         left: 1000px;
         top: 10px;
-        color: green;
+        color: lime;
         border: 2px solid white;
         border-style: double;
 
