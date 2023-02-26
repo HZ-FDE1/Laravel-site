@@ -6,6 +6,8 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PostsController;
+use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\ArticlesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,4 +27,7 @@ Route::get('/profile', [ProfileController::class, 'show']);
 Route::get('/dashboard',[DashboardController::class, 'show']);
 Route::get('/faq',[FaqController::class, 'show']);
 Route::get('/blog',[BlogController::class, 'show']);
+Route::get('/article',[ArticleController::class, 'show']);
+Route::get('/articles/{article}',[ArticlesController::class, 'show']);
+
 

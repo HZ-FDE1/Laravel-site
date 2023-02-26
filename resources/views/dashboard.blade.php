@@ -1,7 +1,7 @@
 @extends('layout')
 
     <head>
-        <link rel="stylesheet" href="css/style-dashboard.css">
+        <link rel="stylesheet" href="/css/style-dashboard.css">
         <title>Dashboard</title>
     </head>
 
