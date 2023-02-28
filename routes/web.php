@@ -22,11 +22,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/posts/{post}', [PostsController::class, 'show']);
+
 Route::get('/welcome', [WelcomeController::class, 'show']);
+
 Route::get('/profile', [ProfileController::class, 'show']);
+
 Route::get('/dashboard',[DashboardController::class, 'show']);
-Route::get('/faq',[FaqController::class, 'show']);
+
+Route::get('/faq',[FaqController::class, 'index']);
+Route::post('/faq',[FaqController::class, 'store']);
+Route::get('/faq/create',[FaqController::class, 'create']);
+
 Route::get('/blog',[BlogController::class, 'show']);
+
 Route::get('/articles',[ArticlesController::class, 'index']);
 Route::post('/articles', [ArticlesController::class, 'store']);
 Route::get('/articles/create' , [ArticlesController::class, 'create']);

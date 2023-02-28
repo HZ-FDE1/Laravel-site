@@ -6,13 +6,17 @@
     </head>
 @section('faq_content')
     <body>
-    <ul class="faq-list">
-        @foreach($faq as $faq)
-            <li>{{ $faq->question }}</li>
-            <li>{{ $faq->answer }}</li>
-            <li>{{ $faq->link }}</li>
-        @endforeach
-    </ul>
+    <div class="faq-list">
+        <a href="/faq/create" >
+            <button> Create a FAQ here!</button>
+        </a>
+        <a>
+            @foreach($faq as $faq)
+                <h2>  {{ $faq->question }} </h2>
+            @endforeach
+        </a>
+    </div>
+
 
     <Main>
         <h2 class="faqtitle">frequently asked questions</h2>

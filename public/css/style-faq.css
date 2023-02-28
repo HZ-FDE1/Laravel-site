@@ -342,7 +342,13 @@
   .faq-list {
       position: relative;
       left: 950px;
-      top: 50px;
+      top: 100px;
       font-size: 20;
       width: 200px;
+  }
+
+  .contentCreateFaq {
+      position: relative;
+      left: 950px;
+      top: 50px;
   }

@@ -43,6 +43,7 @@
     @yield('dashboard_content')
     @yield('profile_content')
     @yield('faq_content')
+    @yield('faq_create')
     @yield('blog_content')
     @yield('article_content')
     @yield('article_create')
