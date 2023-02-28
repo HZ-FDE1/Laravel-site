@@ -7,7 +7,7 @@
     <body>
     <div class="ArticleContent">
         <a href="/articles/create" >
-            <button> Create an article here!</button>
+            <button> Make an Article here!</button>
         </a>
         <ul>
             @foreach($articles as $article)

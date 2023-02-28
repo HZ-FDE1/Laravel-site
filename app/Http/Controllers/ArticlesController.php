@@ -29,6 +29,13 @@ class ArticlesController extends Controller
     }
 
     public function store() {
+
+        request()->validate([
+            'title' => 'required',
+            'excerpt' => 'required',
+            'body' => 'required'
+        ]);
+
         $article = new Article();
         $article->title = request('title');
         $article->excerpt = request('excerpt');
@@ -40,6 +47,7 @@ class ArticlesController extends Controller
 
     public function edit($id) {
 
+
         $article = Article::find($id);
 
         return view('articles.edit', ['article' => $article]);
@@ -47,6 +55,12 @@ class ArticlesController extends Controller
     }
 
     public function update($id) {
+
+        request()->validate([
+            'title' => 'required',
+            'excerpt' => 'required',
+            'body' => 'required'
+        ]);
 
         $article = Article::find($id);
 
@@ -58,7 +72,10 @@ class ArticlesController extends Controller
         return redirect('/articles/' . $article->id);
     }
 
-    public function destroy() {
+    public function destroy($id) {
+        $article = Article::find($id);
+        $article->delete();
 
+        return redirect('/articles');
     }
 }

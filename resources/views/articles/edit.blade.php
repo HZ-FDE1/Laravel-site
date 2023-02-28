@@ -16,7 +16,10 @@
                         <label class="Label"> Title</label>
 
                         <div class="control">
-                            <input class="input" type="text" name="title" value="{{ $article->title }}">
+                            <input class="input @error('title') is-danger @enderror" type="text" name="title" value="{{ $article->title }} {{old('title')}}">
+                            @error('title')
+                            <p class="help is-danger">{{ $errors->first('title') }}</p>
+                            @enderror
                         </div>
                     </div>
 
@@ -24,7 +27,10 @@
                         <label class="Label"> Excerpt</label>
 
                         <div class="control">
-                            <textarea class="textarea" name="excerpt">{{ $article->excerpt }}</textarea>
+                            <textarea class="textarea @error('excerpt') is-danger @enderror" name="excerpt">{{ $article->excerpt }} {{old('excerpt')}}</textarea>
+                            @error('excerpt')
+                            <p class="help is-danger">{{ $errors->first('excerpt') }}</p>
+                            @enderror
                         </div>
                     </div>
 
@@ -32,7 +38,10 @@
                         <label class="Label"> Body</label>
 
                         <div class="control">
-                            <textarea class="textarea" name="body">{{ $article->body }}</textarea>
+                            <textarea class="textarea @error('excerpt') is-danger @enderror" name="body">{{ $article->body }} {{old('excerpt')}}</textarea>
+                            @error('body')
+                            <p class="help is-danger">{{ $errors->first('body') }}</p>
+                            @enderror
                         </div>
                     </div>
 
@@ -42,7 +51,11 @@
                         </div>
                     </div>
                 </form>
-            </div>
+                        <form method="POST" action="/articles/{{$article->id}}">
+                            @csrf
+                            @method('DELETE')
+                            <button class="button is-link" type="submit">Delete</button>
+                        </form>
         </div>
     @endsection
 

@@ -13,6 +13,8 @@
         <a>
             @foreach($faq as $faq)
                 <h2>  {{ $faq->question }} </h2>
+                <h3>  {{ $faq->answer }} </h3>
+                <h3>  {{ $faq->link }} </h3>
             @endforeach
         </a>
     </div>
