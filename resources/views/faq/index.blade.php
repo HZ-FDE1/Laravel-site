@@ -10,13 +10,13 @@
         <a href="/faq/create" >
             <button> Create a FAQ here!</button>
         </a>
-        <a>
+        <ul>
             @foreach($faq as $faq)
-                <h2>  {{ $faq->question }} </h2>
-                <h3>  {{ $faq->answer }} </h3>
-                <h3>  {{ $faq->link }} </h3>
+                <h2>
+                    <a href="/faq/{{ $faq->id }}"> {{$faq->question}}  </a>
+                </h2>
             @endforeach
-        </a>
+        </ul>
     </div>
 
 

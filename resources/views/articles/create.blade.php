@@ -39,7 +39,7 @@
 
                     <div class="control">
                         <textarea class="textarea @error('excerpt') is-danger @enderror" name="body">{{old('excerpt')}}</textarea>
-                        @error('body')
+                        @error('excerpt')
                         <p class="help is-danger">{{ $errors->first('body') }}</p>
                         @enderror
                     </div>
