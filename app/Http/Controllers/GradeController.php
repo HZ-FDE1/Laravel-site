@@ -3,8 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Grade;
-use App\Http\Requests\StoreGradeRequest;
-use App\Http\Requests\UpdateGradeRequest;
+use Illuminate\Http\Request;
 
 class GradeController extends Controller
 {
@@ -15,7 +14,10 @@ class GradeController extends Controller
      */
     public function index()
     {
-        //
+        $grade = Grade::latest()->get();
+
+
+        return view('grades.index',  ['grades' => $grade]);
     }
 
     /**
@@ -25,62 +27,69 @@ class GradeController extends Controller
      */
     public function create()
     {
-        //
+        return view('grades.create');
+
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreGradeRequest  $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreGradeRequest $request)
+    public function store(Request $request)
     {
-        //
+        $validatedAttributes = $request->validate([
+            'course_name' => 'required',
+            'test_name' => 'required',
+            'best_grade' => 'required|numeric'
+        ]);
+
+        Grade::create($validatedAttributes);
+        return redirect(route('grades.index'));
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Grade  $grade
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Grade $grade)
-    {
-        //
-    }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Grade  $grade
+     * @param  \App\Models\Grade  $grades
      * @return \Illuminate\Http\Response
      */
     public function edit(Grade $grade)
     {
-        //
+        return view('grades.edit', ['grade' => $grade]);
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateGradeRequest  $request
-     * @param  \App\Models\Grade  $grade
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\Grade  $grades
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateGradeRequest $request, Grade $grade)
-    {
-        //
+    public function update(Request $request, Grade $grade) {
+
+        $validatedAttributes = $request->validate([
+            'course_name' => 'required',
+            'test_name' => 'required',
+            'best_grade' => 'required'
+        ]);
+
+        $grade->update($validatedAttributes);
+
+        return redirect(route('grades.index', $grade));
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Grade  $grade
+     * @param  \App\Models\Grade  $grades
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Grade $grade)
-    {
-        //
+    public function destroy(Grade  $grade) {
+        $grade->delete();
+
+        return redirect(route('grades.index'));
     }
 }

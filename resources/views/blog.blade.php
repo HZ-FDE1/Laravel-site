@@ -5,7 +5,7 @@
         <title>Blog</title>
     </head>
 
-@section('blog_content')
+@section('content')
     <body>
     <Main>
         <h2 class="BlogTitle">Blog</h2>

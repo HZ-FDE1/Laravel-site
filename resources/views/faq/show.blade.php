@@ -3,7 +3,7 @@
     <link rel="stylesheet" href="/css/style-faq.css">
     <title>FAQ's</title>
 </head>
-@section('faq_content')
+@section('content')
     <body>
     <div class="contentCreateFaq">
         <a href="/faq" >
@@ -13,6 +13,12 @@
         <ul>
                 <h1> {{$faq->question}}</h1>
                 <h3> {{$faq->answer}}</h3>
+
+                <h3 >
+                    <a href="{{$faq->link}}">
+                        {{$faq->link}}
+                    </a>
+                </h3>
         </ul>
         </div>
         <a href="/faq/{{ $faq->id }}/edit" >

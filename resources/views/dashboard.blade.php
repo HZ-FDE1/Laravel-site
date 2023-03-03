@@ -5,7 +5,7 @@
         <title>Dashboard</title>
     </head>
 
-@section('dashboard_content')
+@section('content')
     <body>
     <Main>
         <h1 class="dashtitle">Dashboard</h1>

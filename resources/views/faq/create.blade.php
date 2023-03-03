@@ -3,7 +3,7 @@
     <link rel="stylesheet" href="/css/style-faq.css">
     <title>Create FAQ</title>
 </head>
-@section('faq_create')
+@section('content')
     <div id="wrapper" class="contentCreateFaq">
         <div id="page" class="container">
             <h1>Create A New Article</h1>

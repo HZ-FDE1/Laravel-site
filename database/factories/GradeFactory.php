@@ -2,10 +2,11 @@
 
 namespace Database\Factories;
 
+use App\Models\Grade;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Grade>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<Grade>
  */
 class GradeFactory extends Factory
 {
@@ -18,6 +19,9 @@ class GradeFactory extends Factory
     {
         return [
             //
+            'course_name' => fake()->jobTitle(),
+            'test_name' => fake()->ipv4(),
+            'best_grade' => fake()->numberBetween(0, 10)
         ];
     }
 }

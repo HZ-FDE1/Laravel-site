@@ -16,6 +16,8 @@
         <a href="faq" class="{{ Request::path() === 'faq' ? 'active' : '' }}">FAQ</a>
         <a href="blog" class="{{ Request::path() === 'blog' ? 'active' : '' }}">Blog</a>
         <a href="articles" class="{{ Request::path() === 'articles' ? 'active' : '' }}">Articles</a>
+        <a href="grades" class="{{ Request::path() === 'grades' ? 'active' : '' }}">Grades</a>
+
         <a>&nbsp</a>
         <a href="https://teams.microsoft.com/l/channel/19%3a2e2afa0286b04932be16cb8ad2d9d2c0%40thread.skype/Algemeen?groupId=95bddebc-a340-4d88-81fc-b80e0bfc70c3&amp;tenantId=4c16deb3-342d-4fca-bcd5-b1429308034c">Teams</a>
         <a>------------------</a>
@@ -39,16 +41,7 @@
         </a>
         <a class="Githublink" href="https://github.com/UBaron">Ontdek mijn werk!</a>
     </header>
-    @yield('welcome_content')
-    @yield('dashboard_content')
-    @yield('profile_content')
-    @yield('faq_content')
-    @yield('faq_create')
-    @yield('faq_edit')
-    @yield('blog_content')
-    @yield('article_content')
-    @yield('article_create')
-    @yield('article_edit')
+    @yield('content')
     </body>
     </html>
 </DOCTYPE>

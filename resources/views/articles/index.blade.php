@@ -3,7 +3,7 @@
     <link rel="stylesheet" href="/css/style-article.css">
     <title>Article</title>
 </head>
-@section('article_content')
+@section('content')
     <body>
     <div class="ArticleContent">
         <a href="/articles/create" >

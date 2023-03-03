@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="/css/style-faq.css">
     <title>Create FAQ</title>
 </head>
-@section('faq_edit')
+@section('content')
     <div id="wrapper" class="contentCreateFaq">
         <div id="page" class="container">
             <h1>Update An FAQ!</h1>

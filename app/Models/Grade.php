@@ -8,11 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Grade extends Model
 {
     use HasFactory;
-
-    /**
-     * @param $new_result
-     * @return void
-     */
+    protected $fillable = ['course_name', 'test_name', 'best_grade'];
     public function addResult($new_result)
     {
         if ($new_result > $this->best_grade) {
@@ -28,5 +24,6 @@ class Grade extends Model
         } else {
             return;
         }
+
     }
 }

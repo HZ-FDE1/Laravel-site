@@ -3,7 +3,7 @@
         <link rel="stylesheet" href="css/style-profile.css">
         <title>Profile</title>
     </head>
-@section('profile_content')
+@section('content')
     <body>
     <main>
         <h1 class="profiletitle">Wie ben ik?</h1>

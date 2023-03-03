@@ -4,7 +4,7 @@
         <link rel="stylesheet" href="css/style-faq.css">
         <title>FAQ</title>
     </head>
-@section('faq_content')
+@section('content')
     <body>
     <div class="faq-list">
         <a href="/faq/create" >

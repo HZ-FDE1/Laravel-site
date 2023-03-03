@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('welcome_content')
+@section('content')
     <head>
         <link rel="stylesheet" href="css/style-index.css">
         <title>Home Page</title>

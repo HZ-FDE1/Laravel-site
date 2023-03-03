@@ -3,7 +3,7 @@
     <link rel="stylesheet" href="/css/style-article.css">
     <title>Create Article</title>
 </head>
-@section('article_create')
+@section('content')
     <div id="wrapper" class="contentCreateArticle">
         <div id="page" class="container">
             <h1>Create A New Article</h1>

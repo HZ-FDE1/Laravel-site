@@ -19,12 +19,12 @@ return new class extends Migration
             $table->string('test_name');
 
             $table->decimal('lowest_passing_grade', $precision = 3, $scale = 1)
-                ->default(5.5)->comment('Lowest grade to pass so average calculations can be applied.');
+                ->default(5.5)->comment('Lowest grades to pass so average calculations can be applied.');
 
             $table->decimal('best_grade', $precision = 3, $scale = 1)->nullable();
 
             $table->date('passed_at')->nullable()
-                ->comment('Date that the grade was larger than or equal to the lowest passing grade.');
+                ->comment('Date that the grades was larger than or equal to the lowest passing grades.');
 
             $table->timestamps();
         });
