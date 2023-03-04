@@ -8,7 +8,7 @@
         <div id="page" class="container">
             <h1>Add a new Grade!</h1>
 
-            <form method="POST" action="/grades">
+            <form method="POST" action="{{route('grades.store')}}">
                 @csrf
 
                 <div class="Field">

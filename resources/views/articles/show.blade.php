@@ -6,7 +6,7 @@
 @section('content')
     <body>
     <div class="ArticleContent">
-        <a href="/articles" >
+        <a href="{{route('articles.index')}}" >
             <button>All Articles :D</button>
         </a>
         <div>
@@ -15,7 +15,7 @@
                 <h3> {{$article->body}}</h3>
         </ul>
         </div>
-        <a href="/articles/{{ $article->id }}/edit" >
+        <a href="{{route('articles.edit', $article)}}" >
             <button>EDIT</button>
         </a>
     </div>

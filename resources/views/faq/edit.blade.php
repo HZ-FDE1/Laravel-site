@@ -9,7 +9,7 @@
         <div id="page" class="container">
             <h1>Update An FAQ!</h1>
 
-            <form method="POST" action="/faq/{{ $faq->id }}">
+            <form method="POST" action="{{route('faq.update', $faq)}}">
                 @csrf
                 @method('PUT')
                 <div class="Field">
@@ -49,7 +49,7 @@
                     </div>
                 </div>
             </form>
-            <form method="POST" action="/faq/{{$faq->id}}">
+            <form method="POST" action="{{route('faq.destroy', $faq)}}">
                 @csrf
                 @method('DELETE')
                 <button class="button is-link" type="submit">Delete</button>

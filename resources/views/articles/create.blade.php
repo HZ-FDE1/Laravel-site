@@ -8,7 +8,7 @@
         <div id="page" class="container">
             <h1>Create A New Article</h1>
 
-            <form method="POST" action="/articles">
+            <form method="POST" action="{{route('articles.store')}}">
                 @csrf
 
                  <div class="Field">

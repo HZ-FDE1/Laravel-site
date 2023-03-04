@@ -6,17 +6,13 @@
 @section('content')
     <body>
     <div class="ArticleContent">
-        <a href="/articles/create" >
+        <a href="{{route('articles.create')}}" >
             <button> Make an Article here!</button>
         </a>
         <ul>
             @foreach($articles as $article)
-                <h1>
-                    <a href="/articles/{{ $article->id }}"> {{$article->title}} </a>
-                </h1>
+                <h1> <a href="{{route('articles.show', $article)}}"> {{$article->title}} </a> </h1>
                 <h2> {{$article->excerpt}}</h2>
-
-
             @endforeach
         </ul>
     </div>

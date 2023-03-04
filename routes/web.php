@@ -28,7 +28,7 @@ Route::get('/welcome', [WelcomeController::class, 'show']);
 
 Route::get('/profile', [ProfileController::class, 'show']);
 
-Route::get('/dashboard',[DashboardController::class, 'show']);
+Route::resource('/dashboard', DashboardController::class);
 
 Route::resource('/faq', FaqController::class);
 

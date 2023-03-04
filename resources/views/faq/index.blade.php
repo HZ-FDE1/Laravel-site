@@ -7,7 +7,7 @@
 @section('content')
     <body>
     <div class="faq-list">
-        <a href="/faq/create" >
+        <a href="{{route('faq.create')}}" >
             <button> Create a FAQ here!</button>
         </a>
         <ul>

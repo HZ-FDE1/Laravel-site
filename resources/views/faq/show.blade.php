@@ -6,7 +6,7 @@
 @section('content')
     <body>
     <div class="contentCreateFaq">
-        <a href="/faq" >
+        <a href="{{route('faq.index')}}" >
             <button>All FAQ's</button>
         </a>
         <div>

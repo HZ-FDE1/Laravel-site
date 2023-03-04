@@ -6,7 +6,7 @@
 @section('content')
     <body>
     <div class="ArticleContent">
-        <a href="/grades/create" >
+        <a href="{{route('grades.create')}}" >
             <button> Add your grades here!</button>
         </a>
         <ul>
@@ -22,7 +22,7 @@
                         <td>{{$grade->course_name}}</td>
                         <td> {{$grade->test_name}}</td>
                         <td> {{$grade->best_grade}}</td>
-                        <td> <a href="grades/{{$grade->id}}/edit" >
+                        <td> <a href="{{route('grades.edit', $grade)}}" >
             <button> Edit!</button>
         </a></td>
                     </tr>
