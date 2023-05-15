@@ -38,7 +38,7 @@
                         <label class="Label"> Body</label>
 
                         <div class="control">
-                            <textarea class="textarea @error('body') is-danger @enderror" name="body">{{ $article->body }} {{old('excerpt')}}</textarea>
+                            <textarea class="textarea @error('body') is-danger @enderror" name="body">{{ $article->body }} {{old('body')}}</textarea>
                             @error('body')
                             <p class="help is-danger">{{ $errors->first('body') }}</p>
                             @enderror
@@ -51,7 +51,7 @@
                         </div>
                     </div>
                 </form>
-                        <form method="POST" action="{{route('articles.destroy', $article)}}">
+                            <form method="POST" action="{{route('articles.destroy', $article)}}">
                             @csrf
                             @method('DELETE')
                             <button class="button is-link" type="submit">Delete</button>
