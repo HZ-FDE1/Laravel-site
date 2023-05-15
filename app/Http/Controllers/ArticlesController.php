@@ -9,7 +9,6 @@ class ArticlesController extends Controller
 {
 
     public function index() {
-        // Renders a list of a resources
         $articles = Article::latest()->get();
 
         return view('articles.index', ['articles' => $articles]);

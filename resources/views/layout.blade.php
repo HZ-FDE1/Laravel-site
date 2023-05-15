@@ -4,13 +4,12 @@
     <head>
         <meta charset="UTF8">
         <link rel="stylesheet" href="/css/style-general.css">
-        <title>Layout</title>
     </head>
 
 
     <body>
     <div class="sidebar">
-        <a href="welcome" class="{{ Request::path() === 'welcome' ? 'active' : '' }}" >Home Page</a>
+        <a href="/" class="{{ Request::path() === 'welcome' ? 'active' : '' }}" >Home Page</a>
         <a href="profile" class="{{ Request::path() === 'profile' ? 'active' : '' }}">Profile</a>
         <a href="dashboard" class="{{ Request::path() === 'dashboard' ? 'active' : '' }}">Dashboard</a>
         <a href="faq" class="{{ Request::path() === 'faq' ? 'active' : '' }}">FAQ</a>

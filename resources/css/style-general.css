@@ -1,0 +1,94 @@
+ body {
+        color : white;
+        background-color: rgb(17, 20, 24);
+        font-family: Arial, Helvetica, sans-serif
+    }
+
+    nav {
+        color: blue;
+    }
+
+    .twitterlink {
+        position: relative;
+        left: 700px;
+        top: 40px;
+        color: rgb(17, 20, 24);
+    }
+
+    .instalink {
+        position: relative;
+        left: 900px;
+        top: 40px;
+        color: rgb(17, 20, 24);
+    }
+
+.faqtable {
+    position: relative;
+    left: 820px;
+}
+
+    .maillink {
+        position: relative;
+        left: 720px;
+        top: 45px;
+        color: rgb(17, 20, 24);
+    }
+
+    .sidebar {
+        height: 125%;
+        width: 250px;
+        position: fixed;
+        z-index: 1;
+        top: 0px;
+        left: 0;
+        background-color: black;
+        overflow-x: hidden;
+        padding-top: 30px;
+    }
+
+    .sidebar a{
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 30px;
+        color: whitesmoke;
+        display: block;
+    }
+
+    .sidebar a:hover {
+        color: lightskyblue;
+    }
+
+    .githublink {
+        position: relative;
+        border: 3px solid white ;
+        transition: all 300ms;
+        top: 50px;
+        left: 1000px;
+        color: white;
+        padding: 15px 20px;
+    }
+
+     .hzlogo {
+        position: relative;
+        top: 90px;
+        left: 25px;
+    }
+
+   .githublink {
+    position: absolute;
+    border: 3px solid white;
+    transition: all 300ms;
+    top: 51px;
+    left: 1106px;
+    color: white;
+    padding: 15px 20px;
+   }
+
+   .active {
+    background-color: grey;
+   }
+
+   .errorCode {
+       position: relative;
+       left: 500px;
+   }

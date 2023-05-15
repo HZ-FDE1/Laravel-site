@@ -24,7 +24,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/posts/{post}', [PostsController::class, 'show']);
 
-Route::get('/welcome', [WelcomeController::class, 'show']);
+Route::get('/', [WelcomeController::class, 'show'])->name('home');
 
 Route::get('/profile', [ProfileController::class, 'show']);
 
@@ -38,8 +38,8 @@ Route::resource('/grades', GradeController::class);
 
 Route::get('/blog',[BlogController::class, 'show']);
 
-
-
-
+Route::get('/test-500', function () {
+    throw new Exception("Test 500 Exception");
+});
 
 

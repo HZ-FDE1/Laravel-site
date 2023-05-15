@@ -19,7 +19,7 @@ class GradeFactory extends Factory
     {
         return [
             //
-            'course_name' => fake()->jobTitle(),
+            'course_id' => fake()->jobTitle(),
             'test_name' => fake()->ipv4(),
             'best_grade' => fake()->numberBetween(0, 10)
         ];

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<!-- 
+<!--
     PHP_CodeSniffer ruleset tailored for HZ-HBOICT Laravel projects. This file defines
     which files to check and what to check in each file. This will provide feedback to
     students about their code quality.
@@ -13,7 +13,7 @@
 <ruleset name="PHP_CodeSniffer">
     <description>The coding standard for HZ-HBOICT Laravel projects.</description>
 
-    <!-- Show progress, show the error codes for each message (source). -->
+    <!-- Show progress, show the errors codes for each message (source). -->
     <arg value="ps" />
     <!-- Strip the filepaths in reports down to the relevant bit. -->
     <arg name="basepath" value="./" />

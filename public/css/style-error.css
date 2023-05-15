@@ -1,0 +1,59 @@
+.errorCode1 {
+    position: relative;
+    left: 700px;
+    top: 100px;
+    width: 750px;
+}
+
+.errorCaption {
+    position: relative;
+    left: 30px;
+    height: 75px;
+    width: 750px;
+    top: -50;
+}
+
+.errorTitle {
+    font-size: 80;
+    width: 1200px;
+    right: 50px;
+    position: relative;
+    top: -50px;
+}
+
+.errorButton {
+    position: relative;
+    left: 230px;
+    width: 300px;
+    height: 75px;
+    top: 20px;
+    font-size: 30;
+    border: #00d1b2;;
+    background-color: cornflowerblue;
+    color: white;
+}
+
+.panicGIF {
+    position: relative;
+    left: 880px;
+    top: 280px;
+}
+
+.errorTitle1 {
+    position: relative;
+    right: 80px;
+    width: 1000px;
+    font-size: 80;
+    top: -30px;
+}
+
+.errorCaption1 {
+    position: relative;
+    top: -30px;
+}
+
+.serverGIF {
+    position: relative;
+    top: 150px;
+    left: 820px;
+}
