@@ -6,7 +6,7 @@
 @section('content')
     <div id="wrapper" class="contentCreateArticle">
         <div id="page" class="container">
-            <h1>Create A New Article</h1>
+            <h1 style="width: 400px">Create A New Article</h1>
 
             <form method="POST" action="{{route('articles.store')}}">
                 @csrf
@@ -15,10 +15,10 @@
                      <label class="Label"> Title</label>
 
                      <div class="control">
-                         <input class="input @error('title') is-danger @enderror" type="text" name="title" value="{{old('title')}}">
 
                          @error('title')
-                         <p class="help is-danger">{{ $errors->first('title') }}</p>
+                         <p class="help is-danger" style="color: red;"><strong>{{ $errors->first('title') }}</strong> </p>
+                         <p style="color: red;"><strong>It seems like you didn't fill in this field.</strong></p>
                          @enderror
                      </div>
                  </div>
@@ -27,9 +27,10 @@
                     <label class="Label"> Excerpt</label>
 
                     <div class="control">
-                        <textarea class="textarea @error('excerpt') is-danger @enderror" name="excerpt"}>{{old('excerpt')}}</textarea>
+                        <textarea class="textarea @error('excerpt') is-danger @enderror" style="width: 320px; height: 130px; font-size: 30px; border-radius: 10px" type="text" name="excerpt"}>{{old('excerpt')}}</textarea>
                         @error('excerpt')
-                        <p class="help is-danger">{{ $errors->first('excerpt') }}</p>
+                        <p style="color: red;" class="help is-danger"><strong>{{ $errors->first('excerpt') }}</strong></p>
+                        <p style="color: red;"><strong>It seems like you didn't fill in this field.</strong></p>
                         @enderror
                     </div>
                 </div>
@@ -38,16 +39,17 @@
                     <label class="Label"> Body</label>
 
                     <div class="control">
-                        <textarea class="textarea @error('body') is-danger @enderror" name="body">{{old('body')}}</textarea>
+                        <textarea class="textarea @error('body') is-danger @enderror"  style="width: 320px; height: 200px; font-size: 30px; border-radius: 10px" type="text" name="body">{{old('body')}}</textarea>
                         @error('body')
-                        <p class="help is-danger">{{ $errors->first('body') }}</p>
+                        <p style="color: red;" class="help is-danger"><strong>{{ $errors->first('body') }} </strong></p>
+                        <p style="color: red;"><strong>It seems like you didn't fill in this field.</strong></p>
                         @enderror
                     </div>
                 </div>
 
                 <div class="field is-grouped">
                     <div class="control">
-                        <button class="button is-link" type="submit">Submit</button>
+                        <button style="position: relative;top: 20px; width: 320px; height: 30px; background-color: gray; font-size: 15px" class="button is-link" type="submit"><strong>Submit</strong></button>
                     </div>
                 </div>
             </form>

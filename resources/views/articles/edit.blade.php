@@ -15,35 +15,39 @@
                     <div class="Field">
                         <label class="Label"> Title</label>
 
-                        <div class="control">
-                            <input class="input @error('title') is-danger @enderror" type="text" name="title" value="{{ $article->title }} {{old('title')}}">
-                            @error('title')
-                            <p class="help is-danger">{{ $errors->first('title') }}</p>
-                            @enderror
+                            <div class="control">
+                                <input class="input @error('title') is-danger @enderror" style="width: 320px; height: 50px; font-size: 30px; border-radius: 10px" type="text" name="title" value="{{old('title')}}"></input>
+
+                                @error('title')
+                                <p class="help is-danger" style="color: red;"><strong>{{ $errors->first('title') }}</strong> </p>
+                                <p style="color: red;"><strong>It seems like you didn't fill in this field.</strong></p>
+                                @enderror
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="Field">
-                        <label class="Label"> Excerpt</label>
+                        <div class="Field">
+                            <label class="Label"> Excerpt</label>
 
-                        <div class="control">
-                            <textarea class="textarea @error('excerpt') is-danger @enderror" name="excerpt">{{ $article->excerpt }} {{old('excerpt')}}</textarea>
-                            @error('excerpt')
-                            <p class="help is-danger">{{ $errors->first('excerpt') }}</p>
-                            @enderror
+                            <div class="control">
+                                <textarea class="textarea @error('excerpt') is-danger @enderror" style="width: 320px; height: 130px; font-size: 30px; border-radius: 10px" type="text" name="excerpt"}>{{old('excerpt')}}</textarea>
+                                @error('excerpt')
+                                <p style="color: red;" class="help is-danger"><strong>{{ $errors->first('excerpt') }}</strong></p>
+                                <p style="color: red;"><strong>It seems like you didn't fill in this field.</strong></p>
+                                @enderror
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="Field">
-                        <label class="Label"> Body</label>
+                        <div class="Field">
+                            <label class="Label"> Body</label>
 
-                        <div class="control">
-                            <textarea class="textarea @error('body') is-danger @enderror" name="body">{{ $article->body }} {{old('body')}}</textarea>
-                            @error('body')
-                            <p class="help is-danger">{{ $errors->first('body') }}</p>
-                            @enderror
+                            <div class="control">
+                                <textarea class="textarea @error('body') is-danger @enderror"  style="width: 320px; height: 200px; font-size: 30px; border-radius: 10px" type="text" name="body">{{old('body')}}</textarea>
+                                @error('body')
+                                <p style="color: red;" class="help is-danger"><strong>{{ $errors->first('body') }} </strong></p>
+                                <p style="color: red;"><strong>It seems like you didn't fill in this field.</strong></p>
+                                @enderror
+                            </div>
                         </div>
-                    </div>
 
                     <div class="field is-grouped">
                         <div class="control">

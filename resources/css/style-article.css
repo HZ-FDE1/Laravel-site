@@ -48,3 +48,7 @@ body, html {
     font-size: 20;
 }
 
+.errorMessage {
+    color: red;
+}
+

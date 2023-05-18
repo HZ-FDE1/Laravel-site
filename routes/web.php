@@ -9,6 +9,7 @@ use App\Http\Controllers\GradeController;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\ArticlesController;
+use App\Http\Controllers\SpotifyController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -37,6 +38,9 @@ Route::resource('/articles', ArticlesController::class);
 Route::resource('/grades', GradeController::class);
 
 Route::get('/blog',[BlogController::class, 'show']);
+
+Route::resource('/spotify', SpotifyController::class);
+
 
 Route::get('/test-500', function () {
     throw new Exception("Test 500 Exception");
