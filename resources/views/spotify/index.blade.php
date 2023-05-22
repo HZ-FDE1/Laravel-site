@@ -15,27 +15,28 @@
             <div id="tokenSection" class="row">
                 <div class="col">
                     <div class="mb-3">
-                        <label for="clientId" class="form-label">Client ID</label>
-                        <input type="text" class="form-control" id="clientId" placeholder="" style="position: relative; left: 30.5px">
+                        <label for="clientId" class="form-label"><strong>Client ID</strong></label>
+                        <input type="text" class="form-control" id="clientId" placeholder="" style="position: relative; left: 49px; border-radius: 5px; width: 200; height: 25px">
                     </div>
 
                     <div class="mb-3" style="position: relative; top: 10px">
-                        <label for="clientSecret" class="form-label">Client Secret</label>
-                        <input type="text" class="form-control" id="clientSecret" placeholder="">
+                        <label for="clientSecret" class="form-label" style=""><strong>Client SECRET</strong></label>
+                        <input type="text" class="form-control" id="clientSecret"  placeholder="" style="border-radius: 5px;  width: 200; height: 25px">
                     </div>
 
                     <br>
 
-                    <input class="btn btn-primary btn-lg" type="button" onclick="requestAuthorization()" value="Authorize"><br/>
+                    <input class="btn btn-primary btn-lg" type="button" onclick="requestAuthorization()" value="Authorize" style="width: 100px; height: 20px; position: relative; left: 160px"><br/>
                 </div>
 
+                <br>
                 <br>
 
                 <div id="deviceSection" class="row">
                     <div class="col">
                         <div class="mb-3">
-                            <label for="devices" class="form-label">Devices</label>
-                            <select id="devices" class="form-control">
+                            <label for="devices" class="form-label"><strong>Devices</strong></label>
+                            <select id="devices" class="form-control" style="border-radius: 5px;  width: 200; height: 25px"">
                             </select>
                             <input class="btn btn-primary btn-sm mt-3" type="button" onclick="refreshDevices()" value="Refresh Devices">
                             <input type="button" class="btn btn-dark btn-sm  mt-3" onclick="transfer()" value="Transfer">
@@ -44,16 +45,18 @@
                         <br>
 
                         <div class="mb-3">
-                            <label for="playlists" class="form-label">Playlists</label>
-                            <select id="playlists" class="form-control">
+                            <label for="playlists" class="form-label"><strong>Playlists</strong></label>
+                            <select id="playlists" class="form-control" style="border-radius: 5px;  width: 200; height: 25px"">
                             </select>
                             <input class="btn btn-primary btn-sm mt-3" type="button" onclick="refreshPlaylists()" value="Refresh Playlists">
 
                         </div>
 
+                        <br>
+
                         <div class="mb-3">
-                            <label for="tracks" class="form-label">Tracks</label>
-                            <select id="tracks" class="form-control">
+                            <label for="tracks" class="form-label"><strong>Songs</strong></label>
+                            <select id="tracks" class="form-control" style="border-radius: 5px;  width: 200; height: 25px"">
                             </select>
                             <input class="btn btn-primary btn-sm mt-3" type="button" onclick="fetchTracks()" value="Fetch Tracks">
                         </div>
@@ -65,11 +68,11 @@
 
                         <div class="row">
                             <div class="col">
-                                <input type="button" class="btn btn-dark" onclick="previous()" value="Prev">
-                                <input type="button" class="btn btn-dark" onclick="play()" value="Play">
-                                <input type="button" class="btn btn-dark" onclick="shuffle()" value="Shuffle">
-                                <input type="button" class="btn btn-dark" onclick="pause()" value="Pause">
-                                <input type="button" class="btn btn-dark" onclick="next()" value="Next">
+                                <input type="button" class="btn btn-dark" onclick="play()" value="Play ▶️">
+                                <input type="button" class="btn btn-dark" onclick="shuffle()" value="Shuffle 🔀">
+                                <input type="button" class="btn btn-dark" onclick="pause()" value="Pause ⏸️">
+                                <input type="button" class="btn btn-dark" onclick="previous()" value="⏮️ Prev">
+                                <input type="button" class="btn btn-dark" onclick="next()" value="Next ⏭️">
                             </div>
                         </div>
 
