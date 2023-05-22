@@ -354,7 +354,6 @@ function onRadioButton( deviceId, playlistId ){
     body.offset.position = 0;
     body.offset.position_ms = 0;
     callApi( "PUT", PLAY + "?device_id=" + deviceId, JSON.stringify(body), handleApiResponse );
-    //callApi( "PUT", SHUFFLE + "?state=true&device_id=" + deviceId, null, handleApiResponse );
 }
 
 function addRadioButton(item, index){
