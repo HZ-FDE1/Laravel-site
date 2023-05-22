@@ -16,17 +16,23 @@
                 <div class="col">
                     <div class="mb-3">
                         <label for="clientId" class="form-label">Client ID</label>
-                        <input type="text" class="form-control" id="clientId" placeholder="">
+                        <input type="text" class="form-control" id="clientId" placeholder="" style="position: relative; left: 30.5px">
                     </div>
-                    <div class="mb-3">
+
+                    <div class="mb-3" style="position: relative; top: 10px">
                         <label for="clientSecret" class="form-label">Client Secret</label>
                         <input type="text" class="form-control" id="clientSecret" placeholder="">
                     </div>
+
+                    <br>
+
                     <input class="btn btn-primary btn-lg" type="button" onclick="requestAuthorization()" value="Authorize"><br/>
                 </div>
+
+                <br>
+
                 <div id="deviceSection" class="row">
                     <div class="col">
-
                         <div class="mb-3">
                             <label for="devices" class="form-label">Devices</label>
                             <select id="devices" class="form-control">
@@ -34,6 +40,8 @@
                             <input class="btn btn-primary btn-sm mt-3" type="button" onclick="refreshDevices()" value="Refresh Devices">
                             <input type="button" class="btn btn-dark btn-sm  mt-3" onclick="transfer()" value="Transfer">
                         </div>
+
+                        <br>
 
                         <div class="mb-3">
                             <label for="playlists" class="form-label">Playlists</label>
@@ -54,8 +62,6 @@
                             <label for="tracks" class="form-label">Album</label>
                             <input id="album" class="form-control">
                         </div>
-
-                        <br>
 
                         <div class="row">
                             <div class="col">
