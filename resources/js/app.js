@@ -1,13 +1,13 @@
-var redirect_uri = "http://127.0.0.3/spotify";
+let redirect_uri = "http://127.0.0.3/spotify";
 
 
-var client_id = "";
-var client_secret = "";
+let client_id = "";
+let client_secret = "";
 
-var access_token = null;
-var refresh_token = null;
-var currentPlaylist = "";
-var radioButtons = [];
+let access_token = null;
+let refresh_token = null;
+let currentPlaylist = "";
+let radioButtons = [];
 
 const AUTHORIZE = "https://accounts.spotify.com/authorize"
 const TOKEN = "https://accounts.spotify.com/api/token";
@@ -19,7 +19,6 @@ const NEXT = "https://api.spotify.com/v1/me/player/next";
 const PREVIOUS = "https://api.spotify.com/v1/me/player/previous";
 const PLAYER = "https://api.spotify.com/v1/me/player";
 const TRACKS = "https://api.spotify.com/v1/playlists/{{PlaylistId}}/tracks";
-const CURRENTLYPLAYING = "https://api.spotify.com/v1/me/player/currently-playing";
 const SHUFFLE = "https://api.spotify.com/v1/me/player/shuffle";
 
 function onPageLoad(){
@@ -31,11 +30,9 @@ function onPageLoad(){
     else{
         access_token = localStorage.getItem("access_token");
         if ( access_token == null ){
-            // we don't have an access token so present token section
             document.getElementById("tokenSection").style.display = 'block';
         }
         else {
-            // we have an access token so present device section
             document.getElementById("deviceSection").style.display = 'block';
             refreshDevices();
             refreshPlaylists();
@@ -325,15 +322,6 @@ function handleCurrentlyPlayingResponse(){
         console.log(this.responseText);
         alert(this.responseText);
     }
-}
-
-function saveNewRadioButton(){
-    let item = {};
-    item.deviceId = deviceId();
-    item.playlistId = document.getElementById("playlists").value;
-    radioButtons.push(item);
-    localStorage.setItem("radio_button", JSON.stringify(radioButtons));
-    refreshRadioButtons();
 }
 
 function refreshRadioButtons(){

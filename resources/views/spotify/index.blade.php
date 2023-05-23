@@ -61,9 +61,10 @@
                             <input class="btn btn-primary btn-sm mt-3" type="button" onclick="fetchTracks()" value="Fetch Tracks" style="position: relative; left: 20px">
                         </div>
 
-                        <div class="mb-3" style="position: relative; top: -1000px">
-                            <label for="tracks" class="form-label">Album</label>
-                            <input id="album" class="form-control">
+                        <br>
+
+                        <div class="mb-3">
+                            <input id="album" class="form-control" type="hidden">
                         </div>
 
                         <div class="row">

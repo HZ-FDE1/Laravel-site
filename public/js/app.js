@@ -1,13 +1,13 @@
-var redirect_uri = "http://127.0.0.3/spotify";
+let redirect_uri = "http://127.0.0.3/spotify";
 
 
-var client_id = "";
-var client_secret = "";
+let client_id = "";
+let client_secret = "";
 
-var access_token = null;
-var refresh_token = null;
-var currentPlaylist = "";
-var radioButtons = [];
+let access_token = null;
+let refresh_token = null;
+let currentPlaylist = "";
+let radioButtons = [];
 
 const AUTHORIZE = "https://accounts.spotify.com/authorize"
 const TOKEN = "https://accounts.spotify.com/api/token";
