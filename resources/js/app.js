@@ -48,7 +48,7 @@ function onPageLoad(){
 function handleRedirect(){
     let code = getCode();
     fetchAccessToken( code );
-    window.history.pushState("", "", redirect_uri); // remove param from url
+    window.history.pushState("", "", redirect_uri);
 }
 
 function getCode(){
@@ -65,7 +65,7 @@ function requestAuthorization(){
     client_id = document.getElementById("clientId").value;
     client_secret = document.getElementById("clientSecret").value;
     localStorage.setItem("client_id", client_id);
-    localStorage.setItem("client_secret", client_secret); // In a real app you should not expose your client_secret to the user
+    localStorage.setItem("client_secret", client_secret);
 
     let url = AUTHORIZE;
     url += "?client_id=" + client_id;
@@ -73,7 +73,7 @@ function requestAuthorization(){
     url += "&redirect_uri=" + encodeURI(redirect_uri);
     url += "&show_dialog=true";
     url += "&scope=user-read-private user-read-email user-modify-playback-state user-read-playback-position user-library-read streaming user-read-playback-state user-read-recently-played playlist-read-private";
-    window.location.href = url; // Show Spotify's authorization screen
+    window.location.href = url;
 }
 
 function fetchAccessToken( code ){
@@ -303,13 +303,13 @@ function handleCurrentlyPlayingResponse(){
 
 
         if ( data.device != null ){
-            // select device
+            // selecteerd de device
             currentDevice = data.device.id;
             document.getElementById('devices').value=currentDevice;
         }
 
         if ( data.context != null ){
-            // select playlist
+            // selecteerd de playlist
             currentPlaylist = data.context.uri;
             currentPlaylist = currentPlaylist.substring( currentPlaylist.lastIndexOf(":") + 1,  currentPlaylist.length );
             document.getElementById('playlists').value=currentPlaylist;
