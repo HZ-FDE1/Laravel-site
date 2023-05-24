@@ -1,13 +1,13 @@
-var redirect_uri = "http://127.0.0.3/spotify";
+let redirect_uri = "http://127.0.0.3/spotify";
 
 
-var client_id = "";
-var client_secret = "";
+let client_id = "";
+let client_secret = "";
 
-var access_token = null;
-var refresh_token = null;
-var currentPlaylist = "";
-var radioButtons = [];
+let access_token = null;
+let refresh_token = null;
+let currentPlaylist = "";
+let radioButtons = [];
 
 const AUTHORIZE = "https://accounts.spotify.com/authorize"
 const TOKEN = "https://accounts.spotify.com/api/token";
@@ -19,7 +19,6 @@ const NEXT = "https://api.spotify.com/v1/me/player/next";
 const PREVIOUS = "https://api.spotify.com/v1/me/player/previous";
 const PLAYER = "https://api.spotify.com/v1/me/player";
 const TRACKS = "https://api.spotify.com/v1/playlists/{{PlaylistId}}/tracks";
-const CURRENTLYPLAYING = "https://api.spotify.com/v1/me/player/currently-playing";
 const SHUFFLE = "https://api.spotify.com/v1/me/player/shuffle";
 
 function onPageLoad(){
@@ -31,11 +30,9 @@ function onPageLoad(){
     else{
         access_token = localStorage.getItem("access_token");
         if ( access_token == null ){
-            // we don't have an access token so present token section
             document.getElementById("tokenSection").style.display = 'block';
         }
         else {
-            // we have an access token so present device section
             document.getElementById("deviceSection").style.display = 'block';
             refreshDevices();
             refreshPlaylists();
@@ -48,7 +45,7 @@ function onPageLoad(){
 function handleRedirect(){
     let code = getCode();
     fetchAccessToken( code );
-    window.history.pushState("", "", redirect_uri); // remove param from url
+    window.history.pushState("", "", redirect_uri);
 }
 
 function getCode(){
@@ -65,7 +62,7 @@ function requestAuthorization(){
     client_id = document.getElementById("clientId").value;
     client_secret = document.getElementById("clientSecret").value;
     localStorage.setItem("client_id", client_id);
-    localStorage.setItem("client_secret", client_secret); // In a real app you should not expose your client_secret to the user
+    localStorage.setItem("client_secret", client_secret);
 
     let url = AUTHORIZE;
     url += "?client_id=" + client_id;
@@ -73,7 +70,7 @@ function requestAuthorization(){
     url += "&redirect_uri=" + encodeURI(redirect_uri);
     url += "&show_dialog=true";
     url += "&scope=user-read-private user-read-email user-modify-playback-state user-read-playback-position user-library-read streaming user-read-playback-state user-read-recently-played playlist-read-private";
-    window.location.href = url; // Show Spotify's authorization screen
+    window.location.href = url;
 }
 
 function fetchAccessToken( code ){
@@ -303,13 +300,13 @@ function handleCurrentlyPlayingResponse(){
 
 
         if ( data.device != null ){
-            // select device
+            // selecteerd de device
             currentDevice = data.device.id;
             document.getElementById('devices').value=currentDevice;
         }
 
         if ( data.context != null ){
-            // select playlist
+            // selecteerd de playlist
             currentPlaylist = data.context.uri;
             currentPlaylist = currentPlaylist.substring( currentPlaylist.lastIndexOf(":") + 1,  currentPlaylist.length );
             document.getElementById('playlists').value=currentPlaylist;
@@ -325,15 +322,6 @@ function handleCurrentlyPlayingResponse(){
         console.log(this.responseText);
         alert(this.responseText);
     }
-}
-
-function saveNewRadioButton(){
-    let item = {};
-    item.deviceId = deviceId();
-    item.playlistId = document.getElementById("playlists").value;
-    radioButtons.push(item);
-    localStorage.setItem("radio_button", JSON.stringify(radioButtons));
-    refreshRadioButtons();
 }
 
 function refreshRadioButtons(){
@@ -354,7 +342,6 @@ function onRadioButton( deviceId, playlistId ){
     body.offset.position = 0;
     body.offset.position_ms = 0;
     callApi( "PUT", PLAY + "?device_id=" + deviceId, JSON.stringify(body), handleApiResponse );
-    //callApi( "PUT", SHUFFLE + "?state=true&device_id=" + deviceId, null, handleApiResponse );
 }
 
 function addRadioButton(item, index){
