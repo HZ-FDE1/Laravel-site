@@ -9,6 +9,7 @@
         <a href="{{route('grades.create')}}" >
             <button> Add your grades here!</button>
         </a>
+        <h1>Not Available</h1>
         <ul>
             <table border="6px" width="1000" height="1000" class="gradeTable">
                 <tr>
