@@ -55,7 +55,7 @@
                         </div>
                     </div>
                 </form>
-                            <form method="POST" action="{{route('articles.destroy', $article)}}">
+                        <form method="POST" action="{{route('articles.destroy', $article)}}">
                             @csrf
                             @method('DELETE')
                             <button class="button is-link" type="submit">Delete</button>

@@ -52,3 +52,11 @@ body, html {
     color: red;
 }
 
+.input.is-danger,
+.textarea.is-danger {
+    border: 2px solid red;
+}
+
+.help.is-danger {
+    color: red;
+}

@@ -1,46 +1,39 @@
 version: '3'
 
-services:
-# Web server (php-apache)
-  Webserver:
-    image: webdevops/php-apache:8.2
-    volumes:
-      - .:/app/
-    ports:
-      - '${APACHE_PORT:-80}:80'
-    networks:
-      - DBApache
-    environment:
-      WEB_DOCUMENT_INDEX: './public/index.php'
-
-# MySQL
-  Database:
-    image: mysql
-    ports:
-      - '${DB_PORT:-3306}:3306'
-    environment:
-      MYSQL_ROOT_PASSWORD: '${DB_PASSWORD}'
-      MYSQL_ROOT_HOST: '%'
-      MYSQL_DATABASE: '${DB_DATABASE}'
-      MYSQL_USER: '${DB_USERNAME}'
-      MYSQL_PASSWORD: '${DB_PASSWORD}'
-    networks:
-      - DBApache
-
-# Node / Composer
-  Node:
-    image: node
-    volumes:
-      - .:/home/node/app
-    working_dir: /home/node/app
-    command: npm install
-
-  Composer:
-    image: composer
-    volumes:
-      - .:/app/
-    command: composer install
-
 networks:
-  DBApache:
-    driver: bridge
+    mynetwork:
+        driver: bridge
+
+services:
+    projectdb:
+      image: mysql:8
+      environment:
+            MYSQL_ROOT_PASSWORD: '${DB_PASSWORD}'
+            MYSQL_ROOT_HOST: '%'
+            MYSQL_DATABASE: '${DB_DATABASE}'
+            MYSQL_PASSWORD: '${DB_PASSWORD}'
+            MYSQL_ALLOW_EMPTY_PASSWORD: 1
+      networks:
+         - mynetwork
+
+    phpmyadmin:
+        depends_on:
+            - projectdb
+        image: phpmyadmin/phpmyadmin
+        environment:
+            PMA_HOST: projectdb
+        ports:
+            - 8081:80
+        networks:
+        - mynetwork
+
+    php-apache:
+        build: ./
+        volumes:
+            - './:/var/www/html'
+        ports:
+            - 8080:80
+        depends_on:
+            - projectdb
+        networks:
+            - mynetwork
