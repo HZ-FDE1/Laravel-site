@@ -92,3 +92,8 @@
        position: relative;
        left: 500px;
    }
+
+   .foutmelding {
+       border-width: 3px;
+       border-color: red;
+   }

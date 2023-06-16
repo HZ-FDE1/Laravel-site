@@ -3,7 +3,7 @@
 @section('content')
     <head>
         <link rel="stylesheet" href="css/style-index.css">
-        <title>Home Page</title>
+        <title>Dashboard Page</title>
     </head>
 
 <h1 class="typewriter"> Hi, ik ben Uriël :)</h1>
