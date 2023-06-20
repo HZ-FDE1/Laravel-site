@@ -1,0 +1,40 @@
+body, html {
+    width: 40%;
+    height: 100%;
+    }
+
+    body {
+        color : white;
+        background-color: rgb(17, 20, 24);
+    }
+    nav {
+        font-family: Arial, Helvetica, sans-serif;
+        color: blue;
+    }
+
+    .planeimg {
+        position: relative;
+        left: 950px;
+        top: 140px;
+        border-radius: 50%;
+    }
+
+    .profiletitle {
+        position: relative;
+        left: 980px;
+        top: 100px;
+        font-size: 40;
+        font-family: Arial, Helvetica, sans-serif
+    }
+
+    .textprofile {
+        position: relative;
+        left: 950px;
+        top: 10px;
+    }
+
+    .zeelandimg {
+        position: relative;
+        left: 1250px;
+        top: 190px;
+    }

@@ -1,0 +1,73 @@
+body{
+    min-height: 100vh;
+    background-color: rgb(17, 20, 24);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.typewriter {
+    position: relative;
+    top: 150px;
+    left: 930px;
+}
+.typewriter::after {
+    content: "|";
+    position: absolute;
+    right: 10;
+    color: white;
+    background-color: rgb(17, 20, 24);
+    width: 100%;
+    animation: typing 2.5s steps(20) alternate infinite,
+    line  0.5s  infinite;
+}
+@keyframes typing{
+    to{
+        width: 0%;
+    }
+}
+@keyframes line {
+    50%{
+        color: transparent;
+    }
+}
+
+.profilepicfront {
+    border-radius: 50%;
+    position: relative;
+    top:  -150px;
+    left:  900px;
+}
+
+.profilepicback {
+    border-radius: 50%;
+    position: relative;
+    top:  175px;
+    left: 850px;
+    width: 400px;
+    height: 400px;
+
+}
+.profilepicfront {
+    border-radius: 50%;
+    position: relative;
+    top:   -225px;
+    left:  850px;
+    height: 400px;
+    width: 400px;
+    opacity: 1;
+    transition: all 0.9s ease;
+}
+.profilepicfront:hover{
+   opacity: 0; 
+}
+
+.waaromict {
+    position: relative;
+    left: 900px;
+    top: -200px;
+}

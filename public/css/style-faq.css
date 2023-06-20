@@ -1,0 +1,354 @@
+     html, body {
+    height: 100%;
+   }
+
+
+    body {
+        color : white;
+        background-color: rgb(17, 20, 24);
+    }
+    nav {
+        font-family: Arial, Helvetica, sans-serif;
+        color: blue;
+    }
+
+    .faqtitle {
+        position: relative;
+        font-size: 40;
+        left: 820px;
+        top: 100px;
+        width: 600px;
+    }
+
+    .printtitle {
+        position: relative;
+        top: 40px;
+    }
+
+    .scantitle {
+        position: relative;
+        top: 30px;
+    }
+
+    .scanlink {
+        color: white;
+        font-size: 30;
+    }
+
+    .shoplink {
+        color: white;
+    }
+
+    .shoptext {
+        position: relative;
+        top: 10px;
+    }
+
+    .covidtitle {
+        position: relative;
+        top: 30px;
+    }
+
+    .covidlink {
+        position: relative;
+        top: -10px;
+        color: white;
+        font-size: 20;
+    }
+
+    .reslink {
+        color: white;
+    }
+
+    .restitle {
+        position: relative;
+        top: 40px;
+    }
+
+    .restext {
+        position: relative;
+        top: 10px;
+    }
+
+    .cartitle {
+        position: relative;
+        top: 30px;
+    }
+
+    .carlink {
+        color: white;
+        font-size: 25;
+    }
+
+  .flip-box1 {
+  position: relative;
+  background-color: transparent;
+  width: 350px;
+  height: 150px;
+  border: 3px solid #f1f1f1;
+  perspective: 1000px;
+  left: 650px;
+  top: 200px;
+}
+
+.flip-box-inner1 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box1:hover .flip-box-inner1 {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front1, .flip-box-back1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-front1 {
+  background-color: transparent;
+  color: white;
+}
+
+.flip-box-back1 {
+  background-color: transparent;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+
+.flip-box2 {
+  position: relative;
+  background-color: transparent;
+  width: 350px;
+  height: 150px;
+  border: 3px solid #f1f1f1;
+  perspective: 1000px;
+  left: 1150px;
+  top: 42px;
+}
+
+.flip-box-inner2 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box2:hover .flip-box-inner2 {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front2, .flip-box-back2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-front2 {
+  background-color: transparent;
+  color: white;
+}
+
+.flip-box-back2 {
+  background-color: transparent;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.flip-box3 {
+  position: relative;
+  background-color: transparent;
+  width: 350px;
+  height: 150px;
+  border: 3px solid #f1f1f1;
+  perspective: 1000px;
+  left: 650px;
+  top: 90px;
+}
+
+.flip-box-inner3 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box3:hover .flip-box-inner3 {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front3, .flip-box-back3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-front3 {
+  background-color: transparent;
+  color: white;
+}
+
+.flip-box-back3 {
+  background-color: transparent;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.flip-box4 {
+  position: relative;
+  background-color: transparent;
+  width: 350px;
+  height: 150px;
+  border: 3px solid #f1f1f1;
+  perspective: 1000px;
+  left: 1150px;
+  top: -65px;
+}
+
+.flip-box-inner4 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box4:hover .flip-box-inner4 {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front4, .flip-box-back4 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-front4 {
+  background-color: transparent;
+  color: white;
+}
+
+.flip-box-back4 {
+  background-color: transparent;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.flip-box5 {
+  position: relative;
+  background-color: transparent;
+  width: 350px;
+  height: 150px;
+  border: 3px solid #f1f1f1;
+  perspective: 1000px;
+  left: 650px;
+  top: -10px;
+}
+
+.flip-box-inner5 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box5:hover .flip-box-inner5 {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front5, .flip-box-back5 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-front5 {
+  background-color: transparent;
+  color: white;
+}
+
+.flip-box-back5 {
+  background-color: transparent;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.flip-box6 {
+    position: relative;
+    background-color: transparent;
+    width: 350px;
+    height: 150px;
+    border: 3px solid #f1f1f1;
+    perspective: 1000px;
+    left: 1150px;
+    top: -165px;
+  }
+
+  .flip-box-inner6 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  .flip-box6:hover .flip-box-inner6 {
+    transform: rotateY(180deg);
+  }
+
+  .flip-box-front6, .flip-box-back6 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  .flip-box-front6 {
+    background-color: transparent;
+    color: white;
+  }
+
+  .flip-box-back6 {
+    background-color: transparent;
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+  .faq-list {
+      position: relative;
+      left: 950px;
+      top: 100px;
+      font-size: 20;
+      width: 200px;
+  }
+
+  .contentCreateFaq {
+      position: relative;
+      left: 950px;
+      top: 50px;
+  }

@@ -1,0 +1,50 @@
+body, html {
+    width: 40%;
+    height: 110%;
+}
+
+.ArticleContent {
+    position: relative;
+    left: 950px;
+    top: 100px   ;
+}
+
+.eviedehond {
+    position: relative;
+    left: 1000px;
+    top: 240px;
+}
+
+body, html {
+    width: 40%;
+    height: 110%;
+}
+
+.ArticleContent {
+    position: relative;
+    left: 950px;
+    top: 100px   ;
+}
+
+.eviemain {
+    position: relative;
+    left: 1500px;
+    top: -100px;
+}
+
+.contentCreateArticle {
+    position: relative;
+    left: 850px;
+    top: 50px
+}
+
+.gradeTable {
+    position: relative;
+    left: -475px;
+    top: 20px;
+    border: 3px solid white;
+    border-width: 2px;
+    border-style: dotted;
+    font-size: 20;
+}
+
